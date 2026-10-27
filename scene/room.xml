@@ -1,0 +1,699 @@
+<mujoco model="room">
+  <compiler meshdir="assets" alignfree="true"/>
+  <option gravity="0 0 -9.81" timestep="0.001" integrator="implicitfast"><flag multiccd="enable"/></option>
+  <asset>
+    <mesh name="chair_01__vis__chair_01" file="chair_01__vis__chair_01.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_left_bottom" file="chair_01__col__COL_back_legs_left_bottom.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_left_middle" file="chair_01__col__COL_back_legs_left_middle.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_left_top" file="chair_01__col__COL_back_legs_left_top.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_right_bottom" file="chair_01__col__COL_back_legs_right_bottom.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_right_middle" file="chair_01__col__COL_back_legs_right_middle.obj"/>
+    <mesh name="chair_01__col__COL_back_legs_right_top" file="chair_01__col__COL_back_legs_right_top.obj"/>
+    <mesh name="chair_01__col__COL_front_legs_left" file="chair_01__col__COL_front_legs_left.obj"/>
+    <mesh name="chair_01__col__COL_front_legs_right" file="chair_01__col__COL_front_legs_right.obj"/>
+    <mesh name="chair_01__col__COL_legs_connectors_back" file="chair_01__col__COL_legs_connectors_back.obj"/>
+    <mesh name="chair_01__col__COL_legs_connectors_front" file="chair_01__col__COL_legs_connectors_front.obj"/>
+    <mesh name="chair_01__col__COL_seat" file="chair_01__col__COL_seat.obj"/>
+    <mesh name="chair_01__col__COL_spine_left" file="chair_01__col__COL_spine_left.obj"/>
+    <mesh name="chair_01__col__COL_spine_right" file="chair_01__col__COL_spine_right.obj"/>
+    <mesh name="plate_01__vis__plate_01" file="plate_01__vis__plate_01.obj"/>
+    <mesh name="plate_01__col__COL_plate_base_01" file="plate_01__col__COL_plate_base_01.obj"/>
+    <mesh name="plate_01__col__COL_plate_top_01" file="plate_01__col__COL_plate_top_01.obj"/>
+    <mesh name="plate_02__vis__plate_01_001" file="plate_02__vis__plate_01_001.obj"/>
+    <mesh name="plate_02__col__COL_plate_base_01_001" file="plate_02__col__COL_plate_base_01_001.obj"/>
+    <mesh name="plate_02__col__COL_plate_top_01_001" file="plate_02__col__COL_plate_top_01_001.obj"/>
+    <mesh name="plate_03__vis__plate_01_002" file="plate_03__vis__plate_01_002.obj"/>
+    <mesh name="plate_03__col__COL_plate_base_01_002" file="plate_03__col__COL_plate_base_01_002.obj"/>
+    <mesh name="plate_03__col__COL_plate_top_01_002" file="plate_03__col__COL_plate_top_01_002.obj"/>
+    <mesh name="plate_04__vis__plate_01_003" file="plate_04__vis__plate_01_003.obj"/>
+    <mesh name="plate_04__col__COL_plate_base_01_003" file="plate_04__col__COL_plate_base_01_003.obj"/>
+    <mesh name="plate_04__col__COL_plate_top_01_003" file="plate_04__col__COL_plate_top_01_003.obj"/>
+    <mesh name="plate_05__vis__plate_01_004" file="plate_05__vis__plate_01_004.obj"/>
+    <mesh name="plate_05__col__COL_plate_base_01_004" file="plate_05__col__COL_plate_base_01_004.obj"/>
+    <mesh name="plate_05__col__COL_plate_top_01_004" file="plate_05__col__COL_plate_top_01_004.obj"/>
+    <mesh name="plate_06__vis__plate_01_005" file="plate_06__vis__plate_01_005.obj"/>
+    <mesh name="plate_06__col__COL_plate_base_01_005" file="plate_06__col__COL_plate_base_01_005.obj"/>
+    <mesh name="plate_06__col__COL_plate_top_01_005" file="plate_06__col__COL_plate_top_01_005.obj"/>
+    <mesh name="plate_07__vis__plate_01_006" file="plate_07__vis__plate_01_006.obj"/>
+    <mesh name="plate_07__col__COL_plate_base_01_006" file="plate_07__col__COL_plate_base_01_006.obj"/>
+    <mesh name="plate_07__col__COL_plate_top_01_006" file="plate_07__col__COL_plate_top_01_006.obj"/>
+    <mesh name="plate_08__vis__plate_01_007" file="plate_08__vis__plate_01_007.obj"/>
+    <mesh name="plate_08__col__COL_plate_base_01_007" file="plate_08__col__COL_plate_base_01_007.obj"/>
+    <mesh name="plate_08__col__COL_plate_top_01_007" file="plate_08__col__COL_plate_top_01_007.obj"/>
+    <mesh name="plate_09__vis__plate_01_008" file="plate_09__vis__plate_01_008.obj"/>
+    <mesh name="plate_09__col__COL_plate_base_01_008" file="plate_09__col__COL_plate_base_01_008.obj"/>
+    <mesh name="plate_09__col__COL_plate_top_01_008" file="plate_09__col__COL_plate_top_01_008.obj"/>
+    <mesh name="fork_01__vis__fork_01" file="fork_01__vis__fork_01.obj"/>
+    <mesh name="fork_01__col__COL_fork_01" file="fork_01__col__COL_fork_01.obj"/>
+    <mesh name="fork_01__col__COL_fork_02" file="fork_01__col__COL_fork_02.obj"/>
+    <mesh name="fork_01__col__COL_fork_03" file="fork_01__col__COL_fork_03.obj"/>
+    <mesh name="fork_02__vis__fork_01_001" file="fork_02__vis__fork_01_001.obj"/>
+    <mesh name="fork_02__col__COL_fork_01_001" file="fork_02__col__COL_fork_01_001.obj"/>
+    <mesh name="fork_02__col__COL_fork_02_001" file="fork_02__col__COL_fork_02_001.obj"/>
+    <mesh name="fork_02__col__COL_fork_03_001" file="fork_02__col__COL_fork_03_001.obj"/>
+    <mesh name="fork_03__vis__fork_01_002" file="fork_03__vis__fork_01_002.obj"/>
+    <mesh name="fork_03__col__COL_fork_01_002" file="fork_03__col__COL_fork_01_002.obj"/>
+    <mesh name="fork_03__col__COL_fork_02_002" file="fork_03__col__COL_fork_02_002.obj"/>
+    <mesh name="fork_03__col__COL_fork_03_002" file="fork_03__col__COL_fork_03_002.obj"/>
+    <mesh name="fork_04__vis__fork_01_003" file="fork_04__vis__fork_01_003.obj"/>
+    <mesh name="fork_04__col__COL_fork_01_003" file="fork_04__col__COL_fork_01_003.obj"/>
+    <mesh name="fork_04__col__COL_fork_02_003" file="fork_04__col__COL_fork_02_003.obj"/>
+    <mesh name="fork_04__col__COL_fork_03_003" file="fork_04__col__COL_fork_03_003.obj"/>
+    <mesh name="fork_05__vis__fork_01_004" file="fork_05__vis__fork_01_004.obj"/>
+    <mesh name="fork_05__col__COL_fork_01_004" file="fork_05__col__COL_fork_01_004.obj"/>
+    <mesh name="fork_05__col__COL_fork_02_004" file="fork_05__col__COL_fork_02_004.obj"/>
+    <mesh name="fork_05__col__COL_fork_03_004" file="fork_05__col__COL_fork_03_004.obj"/>
+    <mesh name="fork_06__vis__fork_01_005" file="fork_06__vis__fork_01_005.obj"/>
+    <mesh name="fork_06__col__COL_fork_01_005" file="fork_06__col__COL_fork_01_005.obj"/>
+    <mesh name="fork_06__col__COL_fork_02_005" file="fork_06__col__COL_fork_02_005.obj"/>
+    <mesh name="fork_06__col__COL_fork_03_005" file="fork_06__col__COL_fork_03_005.obj"/>
+    <mesh name="fork_07__vis__fork_01_006" file="fork_07__vis__fork_01_006.obj"/>
+    <mesh name="fork_07__col__COL_fork_01_006" file="fork_07__col__COL_fork_01_006.obj"/>
+    <mesh name="fork_07__col__COL_fork_02_006" file="fork_07__col__COL_fork_02_006.obj"/>
+    <mesh name="fork_07__col__COL_fork_03_006" file="fork_07__col__COL_fork_03_006.obj"/>
+    <mesh name="fork_08__vis__fork_01_007" file="fork_08__vis__fork_01_007.obj"/>
+    <mesh name="fork_08__col__COL_fork_01_007" file="fork_08__col__COL_fork_01_007.obj"/>
+    <mesh name="fork_08__col__COL_fork_02_007" file="fork_08__col__COL_fork_02_007.obj"/>
+    <mesh name="fork_08__col__COL_fork_03_007" file="fork_08__col__COL_fork_03_007.obj"/>
+    <mesh name="knife_01__vis__knife_01" file="knife_01__vis__knife_01.obj"/>
+    <mesh name="knife_01__col__COL_knife" file="knife_01__col__COL_knife.obj"/>
+    <mesh name="cap_01__vis__cap_01" file="cap_01__vis__cap_01.obj"/>
+    <mesh name="cap_01__col__COL_cap_01" file="cap_01__col__COL_cap_01.obj"/>
+    <mesh name="cap_01__col__COL_cap_02" file="cap_01__col__COL_cap_02.obj"/>
+    <mesh name="cap_02__vis__cap_01_001" file="cap_02__vis__cap_01_001.obj"/>
+    <mesh name="cap_02__col__COL_cap_01_001" file="cap_02__col__COL_cap_01_001.obj"/>
+    <mesh name="cap_02__col__COL_cap_02_001" file="cap_02__col__COL_cap_02_001.obj"/>
+    <mesh name="cap_03__vis__cap_01_002" file="cap_03__vis__cap_01_002.obj"/>
+    <mesh name="cap_03__col__COL_cap_01_002" file="cap_03__col__COL_cap_01_002.obj"/>
+    <mesh name="cap_03__col__COL_cap_02_002" file="cap_03__col__COL_cap_02_002.obj"/>
+    <mesh name="STATIC_bar_counter_01__vis__bar_counter_01" file="STATIC_bar_counter_01__vis__bar_counter_01.obj"/>
+    <mesh name="STATIC_bar_counter_01__col__COL_bar_counter_01" file="STATIC_bar_counter_01__col__COL_bar_counter_01.obj"/>
+    <mesh name="STATIC_bar_counter_01__col__COL_bar_counter_02" file="STATIC_bar_counter_01__col__COL_bar_counter_02.obj"/>
+    <mesh name="STATIC_stool_02__vis__stool_01_001" file="STATIC_stool_02__vis__stool_01_001.obj"/>
+    <mesh name="STATIC_stool_02__col__COL_stool_base_01_001" file="STATIC_stool_02__col__COL_stool_base_01_001.obj"/>
+    <mesh name="STATIC_stool_02__col__COL_stool_base_03_001" file="STATIC_stool_02__col__COL_stool_base_03_001.obj"/>
+    <mesh name="STATIC_stool_02__col__COL_stool_top_001" file="STATIC_stool_02__col__COL_stool_top_001.obj"/>
+    <mesh name="STATIC_stool_02__col__COL_stool_base_02_001" file="STATIC_stool_02__col__COL_stool_base_02_001.obj"/>
+    <mesh name="STATIC_stool_03__vis__stool_01_002" file="STATIC_stool_03__vis__stool_01_002.obj"/>
+    <mesh name="STATIC_stool_03__col__COL_stool_base_01_002" file="STATIC_stool_03__col__COL_stool_base_01_002.obj"/>
+    <mesh name="STATIC_stool_03__col__COL_stool_base_03_002" file="STATIC_stool_03__col__COL_stool_base_03_002.obj"/>
+    <mesh name="STATIC_stool_03__col__COL_stool_top_002" file="STATIC_stool_03__col__COL_stool_top_002.obj"/>
+    <mesh name="STATIC_stool_03__col__COL_stool_base_02_002" file="STATIC_stool_03__col__COL_stool_base_02_002.obj"/>
+    <mesh name="STATIC_stool_04__vis__stool_01_003" file="STATIC_stool_04__vis__stool_01_003.obj"/>
+    <mesh name="STATIC_stool_04__col__COL_stool_base_01_003" file="STATIC_stool_04__col__COL_stool_base_01_003.obj"/>
+    <mesh name="STATIC_stool_04__col__COL_stool_base_03_003" file="STATIC_stool_04__col__COL_stool_base_03_003.obj"/>
+    <mesh name="STATIC_stool_04__col__COL_stool_top_003" file="STATIC_stool_04__col__COL_stool_top_003.obj"/>
+    <mesh name="STATIC_stool_04__col__COL_stool_base_02_003" file="STATIC_stool_04__col__COL_stool_base_02_003.obj"/>
+    <mesh name="STATIC_stool_05__vis__stool_01_004" file="STATIC_stool_05__vis__stool_01_004.obj"/>
+    <mesh name="STATIC_stool_05__col__COL_stool_base_01_004" file="STATIC_stool_05__col__COL_stool_base_01_004.obj"/>
+    <mesh name="STATIC_stool_05__col__COL_stool_base_03_004" file="STATIC_stool_05__col__COL_stool_base_03_004.obj"/>
+    <mesh name="STATIC_stool_05__col__COL_stool_top_004" file="STATIC_stool_05__col__COL_stool_top_004.obj"/>
+    <mesh name="STATIC_stool_05__col__COL_stool_base_02_004" file="STATIC_stool_05__col__COL_stool_base_02_004.obj"/>
+    <mesh name="STATIC_stool_06__vis__stool_01_005" file="STATIC_stool_06__vis__stool_01_005.obj"/>
+    <mesh name="STATIC_stool_06__col__COL_stool_base_01_005" file="STATIC_stool_06__col__COL_stool_base_01_005.obj"/>
+    <mesh name="STATIC_stool_06__col__COL_stool_base_03_005" file="STATIC_stool_06__col__COL_stool_base_03_005.obj"/>
+    <mesh name="STATIC_stool_06__col__COL_stool_top_005" file="STATIC_stool_06__col__COL_stool_top_005.obj"/>
+    <mesh name="STATIC_stool_06__col__COL_stool_base_02_005" file="STATIC_stool_06__col__COL_stool_base_02_005.obj"/>
+    <mesh name="STATIC_stool_07__vis__stool_01_006" file="STATIC_stool_07__vis__stool_01_006.obj"/>
+    <mesh name="STATIC_stool_07__col__COL_stool_base_01_006" file="STATIC_stool_07__col__COL_stool_base_01_006.obj"/>
+    <mesh name="STATIC_stool_07__col__COL_stool_base_03_006" file="STATIC_stool_07__col__COL_stool_base_03_006.obj"/>
+    <mesh name="STATIC_stool_07__col__COL_stool_top_006" file="STATIC_stool_07__col__COL_stool_top_006.obj"/>
+    <mesh name="STATIC_stool_07__col__COL_stool_base_02_006" file="STATIC_stool_07__col__COL_stool_base_02_006.obj"/>
+    <mesh name="STATIC_stool_08__vis__stool_01_007" file="STATIC_stool_08__vis__stool_01_007.obj"/>
+    <mesh name="STATIC_stool_08__col__COL_stool_base_01_007" file="STATIC_stool_08__col__COL_stool_base_01_007.obj"/>
+    <mesh name="STATIC_stool_08__col__COL_stool_base_03_007" file="STATIC_stool_08__col__COL_stool_base_03_007.obj"/>
+    <mesh name="STATIC_stool_08__col__COL_stool_top_007" file="STATIC_stool_08__col__COL_stool_top_007.obj"/>
+    <mesh name="STATIC_stool_08__col__COL_stool_base_02_007" file="STATIC_stool_08__col__COL_stool_base_02_007.obj"/>
+    <mesh name="STATIC_stool_09__vis__stool_01_008" file="STATIC_stool_09__vis__stool_01_008.obj"/>
+    <mesh name="STATIC_stool_09__col__COL_stool_base_01_008" file="STATIC_stool_09__col__COL_stool_base_01_008.obj"/>
+    <mesh name="STATIC_stool_09__col__COL_stool_base_03_008" file="STATIC_stool_09__col__COL_stool_base_03_008.obj"/>
+    <mesh name="STATIC_stool_09__col__COL_stool_top_008" file="STATIC_stool_09__col__COL_stool_top_008.obj"/>
+    <mesh name="STATIC_stool_09__col__COL_stool_base_02_008" file="STATIC_stool_09__col__COL_stool_base_02_008.obj"/>
+    <mesh name="STATIC_stool_10__vis__stool_01_009" file="STATIC_stool_10__vis__stool_01_009.obj"/>
+    <mesh name="STATIC_stool_10__col__COL_stool_base_01_009" file="STATIC_stool_10__col__COL_stool_base_01_009.obj"/>
+    <mesh name="STATIC_stool_10__col__COL_stool_base_03_009" file="STATIC_stool_10__col__COL_stool_base_03_009.obj"/>
+    <mesh name="STATIC_stool_10__col__COL_stool_top_009" file="STATIC_stool_10__col__COL_stool_top_009.obj"/>
+    <mesh name="STATIC_stool_10__col__COL_stool_base_02_009" file="STATIC_stool_10__col__COL_stool_base_02_009.obj"/>
+    <mesh name="STATIC_stool_11__vis__stool_01_010" file="STATIC_stool_11__vis__stool_01_010.obj"/>
+    <mesh name="STATIC_stool_11__col__COL_stool_base_01_010" file="STATIC_stool_11__col__COL_stool_base_01_010.obj"/>
+    <mesh name="STATIC_stool_11__col__COL_stool_base_03_010" file="STATIC_stool_11__col__COL_stool_base_03_010.obj"/>
+    <mesh name="STATIC_stool_11__col__COL_stool_top_010" file="STATIC_stool_11__col__COL_stool_top_010.obj"/>
+    <mesh name="STATIC_stool_11__col__COL_stool_base_02_010" file="STATIC_stool_11__col__COL_stool_base_02_010.obj"/>
+    <mesh name="STATIC_stool_12__vis__stool_01_011" file="STATIC_stool_12__vis__stool_01_011.obj"/>
+    <mesh name="STATIC_stool_12__col__COL_stool_base_01_011" file="STATIC_stool_12__col__COL_stool_base_01_011.obj"/>
+    <mesh name="STATIC_stool_12__col__COL_stool_base_03_011" file="STATIC_stool_12__col__COL_stool_base_03_011.obj"/>
+    <mesh name="STATIC_stool_12__col__COL_stool_top_011" file="STATIC_stool_12__col__COL_stool_top_011.obj"/>
+    <mesh name="STATIC_stool_12__col__COL_stool_base_02_011" file="STATIC_stool_12__col__COL_stool_base_02_011.obj"/>
+    <mesh name="table_07__vis__table_01_006" file="table_07__vis__table_01_006.obj"/>
+    <mesh name="table_07__col__COL_table_base_01_006" file="table_07__col__COL_table_base_01_006.obj"/>
+    <mesh name="table_07__col__COL_table_base_02_006" file="table_07__col__COL_table_base_02_006.obj"/>
+    <mesh name="table_07__col__COL_table_base_03_006" file="table_07__col__COL_table_base_03_006.obj"/>
+    <mesh name="table_07__col__COL_table_top_006" file="table_07__col__COL_table_top_006.obj"/>
+    <mesh name="table_08__vis__table_01_007" file="table_08__vis__table_01_007.obj"/>
+    <mesh name="table_08__col__COL_table_base_01_007" file="table_08__col__COL_table_base_01_007.obj"/>
+    <mesh name="table_08__col__COL_table_base_02_007" file="table_08__col__COL_table_base_02_007.obj"/>
+    <mesh name="table_08__col__COL_table_base_03_007" file="table_08__col__COL_table_base_03_007.obj"/>
+    <mesh name="table_08__col__COL_table_top_007" file="table_08__col__COL_table_top_007.obj"/>
+    <mesh name="table_09__vis__table_01_008" file="table_09__vis__table_01_008.obj"/>
+    <mesh name="table_09__col__COL_table_base_01_008" file="table_09__col__COL_table_base_01_008.obj"/>
+    <mesh name="table_09__col__COL_table_base_02_008" file="table_09__col__COL_table_base_02_008.obj"/>
+    <mesh name="table_09__col__COL_table_base_03_008" file="table_09__col__COL_table_base_03_008.obj"/>
+    <mesh name="table_09__col__COL_table_top_008" file="table_09__col__COL_table_top_008.obj"/>
+    <mesh name="table_10__vis__table_01_009" file="table_10__vis__table_01_009.obj"/>
+    <mesh name="table_10__col__COL_table_base_01_009" file="table_10__col__COL_table_base_01_009.obj"/>
+    <mesh name="table_10__col__COL_table_base_02_009" file="table_10__col__COL_table_base_02_009.obj"/>
+    <mesh name="table_10__col__COL_table_base_03_009" file="table_10__col__COL_table_base_03_009.obj"/>
+    <mesh name="table_10__col__COL_table_top_009" file="table_10__col__COL_table_top_009.obj"/>
+    <mesh name="table_11__vis__table_01_010" file="table_11__vis__table_01_010.obj"/>
+    <mesh name="table_11__col__COL_table_base_01_010" file="table_11__col__COL_table_base_01_010.obj"/>
+    <mesh name="table_11__col__COL_table_base_02_010" file="table_11__col__COL_table_base_02_010.obj"/>
+    <mesh name="table_11__col__COL_table_base_03_010" file="table_11__col__COL_table_base_03_010.obj"/>
+    <mesh name="table_11__col__COL_table_top_010" file="table_11__col__COL_table_top_010.obj"/>
+    <mesh name="table_12__vis__table_01_011" file="table_12__vis__table_01_011.obj"/>
+    <mesh name="table_12__col__COL_table_base_01_011" file="table_12__col__COL_table_base_01_011.obj"/>
+    <mesh name="table_12__col__COL_table_base_02_011" file="table_12__col__COL_table_base_02_011.obj"/>
+    <mesh name="table_12__col__COL_table_base_03_011" file="table_12__col__COL_table_base_03_011.obj"/>
+    <mesh name="table_12__col__COL_table_top_011" file="table_12__col__COL_table_top_011.obj"/>
+    <mesh name="table_13__vis__table_01_012" file="table_13__vis__table_01_012.obj"/>
+    <mesh name="table_13__col__COL_table_base_01_012" file="table_13__col__COL_table_base_01_012.obj"/>
+    <mesh name="table_13__col__COL_table_base_02_012" file="table_13__col__COL_table_base_02_012.obj"/>
+    <mesh name="table_13__col__COL_table_base_03_012" file="table_13__col__COL_table_base_03_012.obj"/>
+    <mesh name="table_13__col__COL_table_top_012" file="table_13__col__COL_table_top_012.obj"/>
+    <mesh name="chair_02__vis__chair_01_001" file="chair_02__vis__chair_01_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_left_bottom_001" file="chair_02__col__COL_back_legs_left_bottom_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_left_middle_001" file="chair_02__col__COL_back_legs_left_middle_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_left_top_001" file="chair_02__col__COL_back_legs_left_top_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_right_bottom_001" file="chair_02__col__COL_back_legs_right_bottom_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_right_middle_001" file="chair_02__col__COL_back_legs_right_middle_001.obj"/>
+    <mesh name="chair_02__col__COL_back_legs_right_top_001" file="chair_02__col__COL_back_legs_right_top_001.obj"/>
+    <mesh name="chair_02__col__COL_front_legs_left_001" file="chair_02__col__COL_front_legs_left_001.obj"/>
+    <mesh name="chair_02__col__COL_front_legs_right_001" file="chair_02__col__COL_front_legs_right_001.obj"/>
+    <mesh name="chair_02__col__COL_legs_connectors_back_001" file="chair_02__col__COL_legs_connectors_back_001.obj"/>
+    <mesh name="chair_02__col__COL_legs_connectors_front_001" file="chair_02__col__COL_legs_connectors_front_001.obj"/>
+    <mesh name="chair_02__col__COL_seat_001" file="chair_02__col__COL_seat_001.obj"/>
+    <mesh name="chair_02__col__COL_spine_left_001" file="chair_02__col__COL_spine_left_001.obj"/>
+    <mesh name="chair_02__col__COL_spine_right_001" file="chair_02__col__COL_spine_right_001.obj"/>
+    <mesh name="chair_03__vis__chair_01_002" file="chair_03__vis__chair_01_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_left_bottom_002" file="chair_03__col__COL_back_legs_left_bottom_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_left_middle_002" file="chair_03__col__COL_back_legs_left_middle_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_left_top_002" file="chair_03__col__COL_back_legs_left_top_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_right_bottom_002" file="chair_03__col__COL_back_legs_right_bottom_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_right_middle_002" file="chair_03__col__COL_back_legs_right_middle_002.obj"/>
+    <mesh name="chair_03__col__COL_back_legs_right_top_002" file="chair_03__col__COL_back_legs_right_top_002.obj"/>
+    <mesh name="chair_03__col__COL_front_legs_left_002" file="chair_03__col__COL_front_legs_left_002.obj"/>
+    <mesh name="chair_03__col__COL_front_legs_right_002" file="chair_03__col__COL_front_legs_right_002.obj"/>
+    <mesh name="chair_03__col__COL_legs_connectors_back_002" file="chair_03__col__COL_legs_connectors_back_002.obj"/>
+    <mesh name="chair_03__col__COL_legs_connectors_front_002" file="chair_03__col__COL_legs_connectors_front_002.obj"/>
+    <mesh name="chair_03__col__COL_seat_002" file="chair_03__col__COL_seat_002.obj"/>
+    <mesh name="chair_03__col__COL_spine_left_002" file="chair_03__col__COL_spine_left_002.obj"/>
+    <mesh name="chair_03__col__COL_spine_right_002" file="chair_03__col__COL_spine_right_002.obj"/>
+    <mesh name="chair_04__vis__chair_01_003" file="chair_04__vis__chair_01_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_left_bottom_003" file="chair_04__col__COL_back_legs_left_bottom_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_left_middle_003" file="chair_04__col__COL_back_legs_left_middle_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_left_top_003" file="chair_04__col__COL_back_legs_left_top_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_right_bottom_003" file="chair_04__col__COL_back_legs_right_bottom_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_right_middle_003" file="chair_04__col__COL_back_legs_right_middle_003.obj"/>
+    <mesh name="chair_04__col__COL_back_legs_right_top_003" file="chair_04__col__COL_back_legs_right_top_003.obj"/>
+    <mesh name="chair_04__col__COL_front_legs_left_003" file="chair_04__col__COL_front_legs_left_003.obj"/>
+    <mesh name="chair_04__col__COL_front_legs_right_003" file="chair_04__col__COL_front_legs_right_003.obj"/>
+    <mesh name="chair_04__col__COL_legs_connectors_back_003" file="chair_04__col__COL_legs_connectors_back_003.obj"/>
+    <mesh name="chair_04__col__COL_legs_connectors_front_003" file="chair_04__col__COL_legs_connectors_front_003.obj"/>
+    <mesh name="chair_04__col__COL_seat_003" file="chair_04__col__COL_seat_003.obj"/>
+    <mesh name="chair_04__col__COL_spine_left_003" file="chair_04__col__COL_spine_left_003.obj"/>
+    <mesh name="chair_04__col__COL_spine_right_003" file="chair_04__col__COL_spine_right_003.obj"/>
+    <mesh name="chair_05__vis__chair_01_004" file="chair_05__vis__chair_01_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_left_bottom_004" file="chair_05__col__COL_back_legs_left_bottom_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_left_middle_004" file="chair_05__col__COL_back_legs_left_middle_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_left_top_004" file="chair_05__col__COL_back_legs_left_top_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_right_bottom_004" file="chair_05__col__COL_back_legs_right_bottom_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_right_middle_004" file="chair_05__col__COL_back_legs_right_middle_004.obj"/>
+    <mesh name="chair_05__col__COL_back_legs_right_top_004" file="chair_05__col__COL_back_legs_right_top_004.obj"/>
+    <mesh name="chair_05__col__COL_front_legs_left_004" file="chair_05__col__COL_front_legs_left_004.obj"/>
+    <mesh name="chair_05__col__COL_front_legs_right_004" file="chair_05__col__COL_front_legs_right_004.obj"/>
+    <mesh name="chair_05__col__COL_legs_connectors_back_004" file="chair_05__col__COL_legs_connectors_back_004.obj"/>
+    <mesh name="chair_05__col__COL_legs_connectors_front_004" file="chair_05__col__COL_legs_connectors_front_004.obj"/>
+    <mesh name="chair_05__col__COL_seat_004" file="chair_05__col__COL_seat_004.obj"/>
+    <mesh name="chair_05__col__COL_spine_left_004" file="chair_05__col__COL_spine_left_004.obj"/>
+    <mesh name="chair_05__col__COL_spine_right_004" file="chair_05__col__COL_spine_right_004.obj"/>
+    <mesh name="chair_06__vis__chair_01_005" file="chair_06__vis__chair_01_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_left_bottom_005" file="chair_06__col__COL_back_legs_left_bottom_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_left_middle_005" file="chair_06__col__COL_back_legs_left_middle_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_left_top_005" file="chair_06__col__COL_back_legs_left_top_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_right_bottom_005" file="chair_06__col__COL_back_legs_right_bottom_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_right_middle_005" file="chair_06__col__COL_back_legs_right_middle_005.obj"/>
+    <mesh name="chair_06__col__COL_back_legs_right_top_005" file="chair_06__col__COL_back_legs_right_top_005.obj"/>
+    <mesh name="chair_06__col__COL_front_legs_left_005" file="chair_06__col__COL_front_legs_left_005.obj"/>
+    <mesh name="chair_06__col__COL_front_legs_right_005" file="chair_06__col__COL_front_legs_right_005.obj"/>
+    <mesh name="chair_06__col__COL_legs_connectors_back_005" file="chair_06__col__COL_legs_connectors_back_005.obj"/>
+    <mesh name="chair_06__col__COL_legs_connectors_front_005" file="chair_06__col__COL_legs_connectors_front_005.obj"/>
+    <mesh name="chair_06__col__COL_seat_005" file="chair_06__col__COL_seat_005.obj"/>
+    <mesh name="chair_06__col__COL_spine_left_005" file="chair_06__col__COL_spine_left_005.obj"/>
+    <mesh name="chair_06__col__COL_spine_right_005" file="chair_06__col__COL_spine_right_005.obj"/>
+    <mesh name="chair_07__vis__chair_01_006" file="chair_07__vis__chair_01_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_left_bottom_006" file="chair_07__col__COL_back_legs_left_bottom_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_left_middle_006" file="chair_07__col__COL_back_legs_left_middle_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_left_top_006" file="chair_07__col__COL_back_legs_left_top_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_right_bottom_006" file="chair_07__col__COL_back_legs_right_bottom_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_right_middle_006" file="chair_07__col__COL_back_legs_right_middle_006.obj"/>
+    <mesh name="chair_07__col__COL_back_legs_right_top_006" file="chair_07__col__COL_back_legs_right_top_006.obj"/>
+    <mesh name="chair_07__col__COL_front_legs_left_006" file="chair_07__col__COL_front_legs_left_006.obj"/>
+    <mesh name="chair_07__col__COL_front_legs_right_006" file="chair_07__col__COL_front_legs_right_006.obj"/>
+    <mesh name="chair_07__col__COL_legs_connectors_back_006" file="chair_07__col__COL_legs_connectors_back_006.obj"/>
+    <mesh name="chair_07__col__COL_legs_connectors_front_006" file="chair_07__col__COL_legs_connectors_front_006.obj"/>
+    <mesh name="chair_07__col__COL_seat_006" file="chair_07__col__COL_seat_006.obj"/>
+    <mesh name="chair_07__col__COL_spine_left_006" file="chair_07__col__COL_spine_left_006.obj"/>
+    <mesh name="chair_07__col__COL_spine_right_006" file="chair_07__col__COL_spine_right_006.obj"/>
+    <mesh name="STATIC_sofa_01__vis__sofa_01" file="STATIC_sofa_01__vis__sofa_01.obj"/>
+    <mesh name="STATIC_sofa_01__col__COL_sofa_01" file="STATIC_sofa_01__col__COL_sofa_01.obj"/>
+    <mesh name="STATIC_sofa_01__col__COL_sofa_02" file="STATIC_sofa_01__col__COL_sofa_02.obj"/>
+    <mesh name="STATIC_wall_03__vis__wall_03" file="STATIC_wall_03__vis__wall_03.obj"/>
+    <mesh name="STATIC_wall_03__col__COL_wall_03" file="STATIC_wall_03__col__COL_wall_03.obj"/>
+    <mesh name="STATIC_wall_04__vis__wall_04" file="STATIC_wall_04__vis__wall_04.obj"/>
+    <mesh name="STATIC_wall_04__col__COL_wall_04" file="STATIC_wall_04__col__COL_wall_04.obj"/>
+    <mesh name="STATIC_wall_02__vis__wall_02" file="STATIC_wall_02__vis__wall_02.obj"/>
+    <mesh name="STATIC_wall_02__col__COL_wall_02" file="STATIC_wall_02__col__COL_wall_02.obj"/>
+    <mesh name="STATIC_wall_01__vis__wall_01" file="STATIC_wall_01__vis__wall_01.obj"/>
+    <mesh name="STATIC_wall_01__col__COL_wall_01" file="STATIC_wall_01__col__COL_wall_01.obj"/>
+  </asset>
+  <worldbody>
+    <light pos="0 0 2.4" dir="0 0 -1" diffuse="0.6 0.6 0.6"/>
+    <light directional="true" pos="0 0 5" dir="0.3 0.3 -1" diffuse="0.4 0.4 0.4"/>
+    <geom name="floor" type="plane" size="10 10 0.1" rgba="0.8 0.8 0.8 1"/>
+    <body name="chair_01">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_01__vis__chair_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_left_bottom" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_left_middle" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_left_top" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_right_bottom" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_right_middle" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_back_legs_right_top" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_front_legs_left" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_front_legs_right" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_legs_connectors_back" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_legs_connectors_front" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_seat" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_spine_left" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_01__col__COL_spine_right" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_01">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_01__vis__plate_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_01__col__COL_plate_base_01" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_01__col__COL_plate_top_01" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_02">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_02__vis__plate_01_001" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_02__col__COL_plate_base_01_001" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_02__col__COL_plate_top_01_001" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_03">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_03__vis__plate_01_002" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_03__col__COL_plate_base_01_002" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_03__col__COL_plate_top_01_002" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_04">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_04__vis__plate_01_003" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_04__col__COL_plate_base_01_003" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_04__col__COL_plate_top_01_003" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_05">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_05__vis__plate_01_004" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_05__col__COL_plate_base_01_004" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_05__col__COL_plate_top_01_004" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_06">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_06__vis__plate_01_005" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_06__col__COL_plate_base_01_005" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_06__col__COL_plate_top_01_005" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_07">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_07__vis__plate_01_006" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_07__col__COL_plate_base_01_006" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_07__col__COL_plate_top_01_006" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_08">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_08__vis__plate_01_007" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_08__col__COL_plate_base_01_007" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_08__col__COL_plate_top_01_007" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="plate_09">
+      <freejoint/>
+      <geom type="mesh" mesh="plate_09__vis__plate_01_008" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="plate_09__col__COL_plate_base_01_008" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="plate_09__col__COL_plate_top_01_008" density="1250.31" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_01">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_01__vis__fork_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_01__col__COL_fork_01" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_01__col__COL_fork_02" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_01__col__COL_fork_03" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_02">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_02__vis__fork_01_001" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_02__col__COL_fork_01_001" density="3733.21" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_02__col__COL_fork_02_001" density="3733.21" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_02__col__COL_fork_03_001" density="3733.21" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_03">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_03__vis__fork_01_002" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_03__col__COL_fork_01_002" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_03__col__COL_fork_02_002" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_03__col__COL_fork_03_002" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_04">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_04__vis__fork_01_003" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_04__col__COL_fork_01_003" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_04__col__COL_fork_02_003" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_04__col__COL_fork_03_003" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_05">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_05__vis__fork_01_004" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_05__col__COL_fork_01_004" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_05__col__COL_fork_02_004" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_05__col__COL_fork_03_004" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_06">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_06__vis__fork_01_005" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_06__col__COL_fork_01_005" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_06__col__COL_fork_02_005" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_06__col__COL_fork_03_005" density="3733.19" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_07">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_07__vis__fork_01_006" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_07__col__COL_fork_01_006" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_07__col__COL_fork_02_006" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_07__col__COL_fork_03_006" density="3733.18" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="fork_08">
+      <freejoint/>
+      <geom type="mesh" mesh="fork_08__vis__fork_01_007" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="fork_08__col__COL_fork_01_007" density="3733.22" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_08__col__COL_fork_02_007" density="3733.22" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="fork_08__col__COL_fork_03_007" density="3733.22" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="knife_01">
+      <freejoint/>
+      <geom type="mesh" mesh="knife_01__vis__knife_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="knife_01__col__COL_knife" density="3508.75" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="cap_01">
+      <freejoint/>
+      <geom type="mesh" mesh="cap_01__vis__cap_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="cap_01__col__COL_cap_01" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="cap_01__col__COL_cap_02" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="cap_02">
+      <freejoint/>
+      <geom type="mesh" mesh="cap_02__vis__cap_01_001" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="cap_02__col__COL_cap_01_001" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="cap_02__col__COL_cap_02_001" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="cap_03">
+      <freejoint/>
+      <geom type="mesh" mesh="cap_03__vis__cap_01_002" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="cap_03__col__COL_cap_01_002" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="cap_03__col__COL_cap_02_002" density="1946.50" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_bar_counter_01">
+      <geom type="mesh" mesh="STATIC_bar_counter_01__vis__bar_counter_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_bar_counter_01__col__COL_bar_counter_01" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_bar_counter_01__col__COL_bar_counter_02" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_02">
+      <geom type="mesh" mesh="STATIC_stool_02__vis__stool_01_001" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_02__col__COL_stool_base_01_001" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_02__col__COL_stool_base_03_001" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_02__col__COL_stool_top_001" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_02__col__COL_stool_base_02_001" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_03">
+      <geom type="mesh" mesh="STATIC_stool_03__vis__stool_01_002" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_03__col__COL_stool_base_01_002" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_03__col__COL_stool_base_03_002" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_03__col__COL_stool_top_002" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_03__col__COL_stool_base_02_002" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_04">
+      <geom type="mesh" mesh="STATIC_stool_04__vis__stool_01_003" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_04__col__COL_stool_base_01_003" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_04__col__COL_stool_base_03_003" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_04__col__COL_stool_top_003" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_04__col__COL_stool_base_02_003" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_05">
+      <geom type="mesh" mesh="STATIC_stool_05__vis__stool_01_004" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_05__col__COL_stool_base_01_004" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_05__col__COL_stool_base_03_004" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_05__col__COL_stool_top_004" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_05__col__COL_stool_base_02_004" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_06">
+      <geom type="mesh" mesh="STATIC_stool_06__vis__stool_01_005" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_06__col__COL_stool_base_01_005" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_06__col__COL_stool_base_03_005" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_06__col__COL_stool_top_005" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_06__col__COL_stool_base_02_005" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_07">
+      <geom type="mesh" mesh="STATIC_stool_07__vis__stool_01_006" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_07__col__COL_stool_base_01_006" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_07__col__COL_stool_base_03_006" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_07__col__COL_stool_top_006" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_07__col__COL_stool_base_02_006" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_08">
+      <geom type="mesh" mesh="STATIC_stool_08__vis__stool_01_007" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_08__col__COL_stool_base_01_007" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_08__col__COL_stool_base_03_007" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_08__col__COL_stool_top_007" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_08__col__COL_stool_base_02_007" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_09">
+      <geom type="mesh" mesh="STATIC_stool_09__vis__stool_01_008" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_09__col__COL_stool_base_01_008" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_09__col__COL_stool_base_03_008" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_09__col__COL_stool_top_008" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_09__col__COL_stool_base_02_008" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_10">
+      <geom type="mesh" mesh="STATIC_stool_10__vis__stool_01_009" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_10__col__COL_stool_base_01_009" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_10__col__COL_stool_base_03_009" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_10__col__COL_stool_top_009" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_10__col__COL_stool_base_02_009" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_11">
+      <geom type="mesh" mesh="STATIC_stool_11__vis__stool_01_010" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_11__col__COL_stool_base_01_010" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_11__col__COL_stool_base_03_010" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_11__col__COL_stool_top_010" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_11__col__COL_stool_base_02_010" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_stool_12">
+      <geom type="mesh" mesh="STATIC_stool_12__vis__stool_01_011" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_stool_12__col__COL_stool_base_01_011" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_12__col__COL_stool_base_03_011" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_12__col__COL_stool_top_011" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_stool_12__col__COL_stool_base_02_011" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_07">
+      <freejoint/>
+      <geom type="mesh" mesh="table_07__vis__table_01_006" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_07__col__COL_table_base_01_006" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_07__col__COL_table_base_02_006" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_07__col__COL_table_base_03_006" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_07__col__COL_table_top_006" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_08">
+      <freejoint/>
+      <geom type="mesh" mesh="table_08__vis__table_01_007" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_08__col__COL_table_base_01_007" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_08__col__COL_table_base_02_007" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_08__col__COL_table_base_03_007" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_08__col__COL_table_top_007" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_09">
+      <freejoint/>
+      <geom type="mesh" mesh="table_09__vis__table_01_008" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_09__col__COL_table_base_01_008" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_09__col__COL_table_base_02_008" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_09__col__COL_table_base_03_008" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_09__col__COL_table_top_008" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_10">
+      <freejoint/>
+      <geom type="mesh" mesh="table_10__vis__table_01_009" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_10__col__COL_table_base_01_009" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_10__col__COL_table_base_02_009" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_10__col__COL_table_base_03_009" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_10__col__COL_table_top_009" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_11">
+      <freejoint/>
+      <geom type="mesh" mesh="table_11__vis__table_01_010" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_11__col__COL_table_base_01_010" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_11__col__COL_table_base_02_010" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_11__col__COL_table_base_03_010" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_11__col__COL_table_top_010" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_12">
+      <freejoint/>
+      <geom type="mesh" mesh="table_12__vis__table_01_011" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_12__col__COL_table_base_01_011" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_12__col__COL_table_base_02_011" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_12__col__COL_table_base_03_011" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_12__col__COL_table_top_011" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="table_13">
+      <freejoint/>
+      <geom type="mesh" mesh="table_13__vis__table_01_012" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="table_13__col__COL_table_base_01_012" mass="20.000" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_13__col__COL_table_base_02_012" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_13__col__COL_table_base_03_012" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="table_13__col__COL_table_top_012" density="220.73" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_02">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_02__vis__chair_01_001" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_left_bottom_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_left_middle_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_left_top_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_right_bottom_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_right_middle_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_back_legs_right_top_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_front_legs_left_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_front_legs_right_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_legs_connectors_back_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_legs_connectors_front_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_seat_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_spine_left_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_02__col__COL_spine_right_001" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_03">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_03__vis__chair_01_002" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_left_bottom_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_left_middle_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_left_top_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_right_bottom_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_right_middle_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_back_legs_right_top_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_front_legs_left_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_front_legs_right_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_legs_connectors_back_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_legs_connectors_front_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_seat_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_spine_left_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_03__col__COL_spine_right_002" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_04">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_04__vis__chair_01_003" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_left_bottom_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_left_middle_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_left_top_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_right_bottom_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_right_middle_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_back_legs_right_top_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_front_legs_left_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_front_legs_right_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_legs_connectors_back_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_legs_connectors_front_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_seat_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_spine_left_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_04__col__COL_spine_right_003" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_05">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_05__vis__chair_01_004" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_left_bottom_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_left_middle_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_left_top_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_right_bottom_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_right_middle_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_back_legs_right_top_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_front_legs_left_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_front_legs_right_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_legs_connectors_back_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_legs_connectors_front_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_seat_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_spine_left_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_05__col__COL_spine_right_004" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_06">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_06__vis__chair_01_005" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_left_bottom_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_left_middle_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_left_top_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_right_bottom_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_right_middle_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_back_legs_right_top_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_front_legs_left_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_front_legs_right_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_legs_connectors_back_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_legs_connectors_front_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_seat_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_spine_left_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_06__col__COL_spine_right_005" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="chair_07">
+      <freejoint/>
+      <geom type="mesh" mesh="chair_07__vis__chair_01_006" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_left_bottom_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_left_middle_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_left_top_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_right_bottom_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_right_middle_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_back_legs_right_top_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_front_legs_left_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_front_legs_right_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_legs_connectors_back_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_legs_connectors_front_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_seat_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_spine_left_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="chair_07__col__COL_spine_right_006" density="455.38" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_sofa_01">
+      <geom type="mesh" mesh="STATIC_sofa_01__vis__sofa_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_sofa_01__col__COL_sofa_01" group="3" rgba="0.2 0.9 0.3 0.4"/>
+      <geom type="mesh" mesh="STATIC_sofa_01__col__COL_sofa_02" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_wall_03">
+      <geom type="mesh" mesh="STATIC_wall_03__vis__wall_03" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_wall_03__col__COL_wall_03" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_wall_04">
+      <geom type="mesh" mesh="STATIC_wall_04__vis__wall_04" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_wall_04__col__COL_wall_04" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_wall_02">
+      <geom type="mesh" mesh="STATIC_wall_02__vis__wall_02" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_wall_02__col__COL_wall_02" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="STATIC_wall_01">
+      <geom type="mesh" mesh="STATIC_wall_01__vis__wall_01" contype="0" conaffinity="0" density="0" group="2" rgba="0.7 0.6 0.5 1"/>
+      <geom type="mesh" mesh="STATIC_wall_01__col__COL_wall_01" group="3" rgba="0.2 0.9 0.3 0.4"/>
+    </body>
+    <body name="agent" pos="-1.432 -4.109 0.61">
+      <joint name="agent_x" type="slide" axis="1 0 0" damping="60"/>
+      <joint name="agent_y" type="slide" axis="0 1 0" damping="60"/>
+      <geom type="capsule" size="0.2 0.4" mass="30" rgba="0.95 0.5 0.1 1"/>
+    </body>
+  </worldbody>
+</mujoco>
