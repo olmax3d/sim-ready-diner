@@ -67,5 +67,8 @@ media/ demo video
 ## Author
 
 Maksym Skrypka  — Technical Artist, Robotics Simulation
+
 [ArtStation](https://www.artstation.com/olmax3d)
-[LinkedIn] (https://pl.linkedin.com/in/maksym-skrypka-b5636794) 
+
+
+[LinkedIn](https://pl.linkedin.com/in/maksym-skrypka-b5636794) 
